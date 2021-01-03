@@ -65,7 +65,6 @@ func init() {
 	rootCmd.AddCommand(importCmd)
 	rootCmd.AddCommand(brainCmd)
 	rootCmd.AddCommand(versionCmd)
-
 }
 
 func initConfig() {
