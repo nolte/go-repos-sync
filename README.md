@@ -40,7 +40,7 @@ asdf install
 
 
 ```sh
-goreleaser --snapshot --skip-publish --rm-dist
+goreleaser --snapshot --skip-publish --rm-dist --skip-sign
 ```
 
 
