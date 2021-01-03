@@ -1,4 +1,6 @@
 # Go Repos Sync
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync?ref=badge_shield)
+
 
 Tool for keep Local Repository in Sync with public/private Remote Hosts like Github/Gitlab.
 
@@ -46,3 +48,7 @@ goreleaser --snapshot --skip-publish --rm-dist --skip-sign
 
 
 * https://www.source-fellows.de/go-datenbank-orm-association/
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync?ref=badge_large)
