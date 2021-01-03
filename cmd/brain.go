@@ -11,7 +11,7 @@ func init() {
 var brainCmd = &cobra.Command{
 	Use:   "brain",
 	Short: "Checkout Brain",
-	Long: `Brain Lookup Commands, give informations about the 
-Local existing repositories.	
+	Long: `Brain Lookup Commands, give informations about the
+Local existing repositories.
 `,
 }

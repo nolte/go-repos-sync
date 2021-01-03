@@ -63,7 +63,7 @@ issues:
   exclude:
     - G107
   # Excluding configuration per-path, per-linter, per-text and per-source
-  exclude-rules:   
+  exclude-rules:
     # Exclude some linters from running on tests files.
     - path: pkg/reposcrtl/utils/lookupValueHelper.go
       #text: "weak cryptographic primitive"
