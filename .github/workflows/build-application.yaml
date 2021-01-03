@@ -3,6 +3,24 @@ name: CI Application Tests
 on:
   push:
 jobs:
+  built_unit_tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name : checkout
+        uses: actions/checkout@v2.3.4
+
+      - uses: actions/setup-go@v2.1.2
+        with:
+          go-version: '1.15'
+
+      - name: run tests
+        run: go test -json ./... > test.json
+
+      - name: annotate tests
+        if: always()
+        uses: guyarb/golang-test-annotations@v0.3.0
+        with:
+          test-results: test.json
   build:
     name: "Application CI Tests"
     runs-on: ubuntu-20.04
