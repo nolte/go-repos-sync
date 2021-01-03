@@ -42,6 +42,28 @@ func TestLookupValueByRef(t *testing.T) {
 			},
 			wantErr: false,
 		},
+		{
+			name: "env-no-value-exists",
+			want: "",
+			args: args{
+				ref: "ref+env://GITHUB_TOKEN  ",
+				ending: func() {
+					os.Unsetenv("GITHUB_TOKEN")
+				},
+				prepare: func() {
+					os.Setenv("GITHUB_TOKEN", "")
+				},
+			},
+			wantErr: true,
+		},
+		{
+			name: "non-exists-prefix",
+			want: "",
+			args: args{
+				ref: "ref+notexists://GITHUB_TOKEN  ",
+			},
+			wantErr: true,
+		},
 	}
 
 	for _, tt := range tests {

@@ -44,6 +44,13 @@ func TestToAbsolutPath(t *testing.T) {
 			},
 			want: path.Join(user.HomeDir, "/test"),
 		},
+		{
+			name: "homedir-direct",
+			args: args{
+				path: "~",
+			},
+			want: user.HomeDir,
+		},
 	}
 
 	for _, tt := range tests {
