@@ -13,9 +13,9 @@ kind: Config
 #    connector: gitlab
 directories:
 - contents:
-  - ref: 
+  - ref:
       remote: "github"
-      ids: 
+      ids:
         - "nolte"
       kind: user
       filter:

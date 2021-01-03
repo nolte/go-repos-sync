@@ -20,9 +20,9 @@ remotes:
 directories:
 #- path: /tmp/fullrepo/github
 #  contents:
-#  - ref: 
+#  - ref:
 #      remote: "github"
-#      ids: 
+#      ids:
 #        - "nolte"
 #      kind: user
 #      filter:
@@ -34,18 +34,18 @@ directories:
 #    #  path: github/minecraft
 - #path: ./fofa
   contents:
-  - ref: 
+  - ref:
       remote: "gitlab"
-      ids: 
+      ids:
         - "9500339"
       kind: group
     checkout:
       keepsGroupPath: true
       keepsBaseGroupNameInPath: false
       path: gitlab
-#  - ref: 
+#  - ref:
 #      remote: "gitlab"
-#      ids: 
+#      ids:
 #        - "9500339"
 #      kind: group
 #      filter:
@@ -59,16 +59,16 @@ directories:
         #excludes:
         #- ".*k8s-local-bare-metal-cluster*."
         #- ".*argo-k8s-clusters*."
-#  - ref: 
+#  - ref:
 #      remote: "gitlab"
 #      id: "9500344"
-#      kind: group     
+#      kind: group
 #    checkout:
-#      path: templating/gitlab-templates       
-#  - ref: 
+#      path: templating/gitlab-templates
+#  - ref:
 #      remote: "gitlab"
 #      id: "9500366"
-#      kind: group     
+#      kind: group
 #    checkout:
 #      path: modules/tf-modules/
 
@@ -81,20 +81,20 @@ directories:
 #  #  checkout:
 #  #    fs_prefix: "cookiecutter-"
 #  #    path: templating
-#  - ref: 
+#  - ref:
 #      remote: "github"
 #      id: "nolte"
 #      kind: user
 #    checkout:
-#      path: github      
+#      path: github
 #      filter:
 #        includes:
 #        - "ansible-*."
-##  - ref: 
+##  - ref:
 ##      remote: "gitlab"
 ##      id: "21397774"
 ##      kind: project
-##  - ref: 
+##  - ref:
 ##      remote: "gitlab"
 ##      id: "4564793"
 ##      kind: group

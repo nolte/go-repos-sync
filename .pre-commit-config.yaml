@@ -1,0 +1,9 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+        exclude: "{{cookiecutter.module_slug}}/*"
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]

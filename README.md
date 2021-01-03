@@ -19,7 +19,7 @@ For Daily usage is it recommendet to Preconfigure the Import Commands, with Sett
 
 For `go-repos-sync import bulk` you will need a Configuration File with the Selected Repository for Sync, from different Remotes.
 
-Examples: 
+Examples:  
  - [`./examples/minimal-projects.yaml`](./examples/minimal-projects.yaml)
  - [`./examples/complex-projects.yaml`](./examples/complex-projects.yaml)
 

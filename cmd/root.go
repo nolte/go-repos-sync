@@ -20,7 +20,7 @@ var (
 	rootCmd = &cobra.Command{
 		Use:   "go-repos-sync",
 		Short: "Checkouts from config",
-		Long: `Keep Remote Repositories, by existing roles, in Sync with your Local Filesystem, 
+		Long: `Keep Remote Repositories, by existing roles, in Sync with your Local Filesystem,
 can keep project in sync for different Workstation.`,
 		PersistentPreRunE: persistentPreRunEFunction,
 	}

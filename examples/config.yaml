@@ -14,7 +14,7 @@ remotes:
 settings:
   basedir: /tmp/repos
   protocol: ssh
-  bulkElements: 
+  bulkElements:
     - "https://gist.githubusercontent.com/nolte/9dd8df3e904ad9d3b5c974a132d29130/raw/9ef3967d08aa5c58e3393a4372ffb1d5772f43ff/public-repos.yaml"
   store:
     syncDBPath: ~/.repos-sync/sync.db
