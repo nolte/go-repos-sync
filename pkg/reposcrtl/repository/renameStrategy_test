@@ -1,0 +1,64 @@
+package repository_test
+
+import (
+	"testing"
+
+	"github.com/nolte/go-repos-sync/pkg/reposcrtl/config"
+	sync "github.com/nolte/go-repos-sync/pkg/reposcrtl/repository"
+	"github.com/stretchr/testify/assert"
+)
+
+type testCaseData struct {
+	strategy *sync.RenameCheckoutStrategy
+	input    string
+	expected string
+}
+
+func testData() []testCaseData {
+	return []testCaseData{
+		{
+			strategy: sync.NewRenameCheckoutStrategy(config.Checkout{}, ""),
+			input:    "first-project",
+			expected: "first-project",
+		},
+		{
+			strategy: sync.NewRenameCheckoutStrategy(config.Checkout{}, "~/repos"),
+			input:    "first-project",
+			expected: "~/repos/first-project",
+		},
+		{
+			strategy: sync.NewRenameCheckoutStrategy(config.Checkout{
+				Path: "subfolder",
+			}, "~/repos"),
+			input:    "first-project",
+			expected: "~/repos/subfolder/first-project",
+		},
+		{
+			strategy: sync.NewRenameCheckoutStrategy(config.Checkout{
+				FsPrefix: "prefix-",
+			}, "~/repos"),
+			input:    "first-project",
+			expected: "~/repos/prefix-first-project",
+		},
+		{
+			strategy: sync.NewRenameCheckoutStrategy(config.Checkout{
+				FsPrefix: "prefix-",
+				Path:     "subfolder",
+			}, "~/repos"),
+			input:    "first-project",
+			expected: "~/repos/subfolder/prefix-first-project",
+		},
+	}
+}
+
+func TestGenerateCheckoutPathMinimalConfig(t *testing.T) {
+	for _, tc := range testData() {
+		t.Run("generate-name", func(t *testing.T) {
+			resultPath := tc.strategy.CheckoutPath(tc.input)
+			assert.Equal(t, tc.expected, resultPath,
+				"Expect '%s' but got '%s' for Includes '%s'",
+				tc.expected, resultPath, tc.input,
+			)
+		})
+	}
+}

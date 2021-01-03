@@ -1,0 +1,104 @@
+apiVersion: reposcrtl.nolte.github.com/v1alpha1
+kind: Config
+remotes:
+  github:
+    endpoint:
+      auth:
+         token: ref+cmd://$(pass internet/github.com/master_api_token)
+    connector: github
+  gitlab:
+    endpoint:
+      auth:
+         token: ref+cmd://$(pass internet/gitlab.com/tokens/management)
+    connector: gitlab
+#  privategitlab:
+#    endpoint:
+#      uri: https://git01.xxxx.de/api/v4
+#      auth:
+#         token: ref+cmd://$(pass private/git01.xxxx.de/token)
+#    connector: gitlab
+directories:
+#- path: /tmp/fullrepo/github
+#  contents:
+#  - ref: 
+#      remote: "github"
+#      ids: 
+#        - "nolte"
+#      kind: user
+#      filter:
+#        excludes:
+#        - "tf-k8s*."
+#        #- ".*harbor*."
+#        #- ".*awx*."
+#    #checkout:
+#    #  path: github/minecraft
+- #path: ./fofa
+  contents:
+  - ref: 
+      remote: "gitlab"
+      ids: 
+        - "9500339"
+      kind: group
+    checkout:
+      keepsGroupPath: true
+      keepsBaseGroupNameInPath: false
+      path: gitlab
+#  - ref: 
+#      remote: "gitlab"
+#      ids: 
+#        - "9500339"
+#      kind: group
+#      filter:
+#        excludes:
+#        - ".*k8s-local-bare-metal-cluster*."
+#        - ".*argo-k8s-clusters*."
+#    checkout:
+#      path: gitlab
+#      keepsGroupPath: true
+#
+        #excludes:
+        #- ".*k8s-local-bare-metal-cluster*."
+        #- ".*argo-k8s-clusters*."
+#  - ref: 
+#      remote: "gitlab"
+#      id: "9500344"
+#      kind: group     
+#    checkout:
+#      path: templating/gitlab-templates       
+#  - ref: 
+#      remote: "gitlab"
+#      id: "9500366"
+#      kind: group     
+#    checkout:
+#      path: modules/tf-modules/
+
+#- path: /tmp/fullrepo
+#  contents:
+#  #- ref:
+#  #    remote: "github"
+#  #    kind: project
+#  #    id: "nolte/cicd-elevator-pitch"
+#  #  checkout:
+#  #    fs_prefix: "cookiecutter-"
+#  #    path: templating
+#  - ref: 
+#      remote: "github"
+#      id: "nolte"
+#      kind: user
+#    checkout:
+#      path: github      
+#      filter:
+#        includes:
+#        - "ansible-*."
+##  - ref: 
+##      remote: "gitlab"
+##      id: "21397774"
+##      kind: project
+##  - ref: 
+##      remote: "gitlab"
+##      id: "4564793"
+##      kind: group
+##    checkout:
+##      fs_prefix: "cookiecutter-"
+##      path: templating
+##

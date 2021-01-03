@@ -1,0 +1,25 @@
+apiVersion: reposcrtl.nolte.github.com/v1alpha1
+kind: Config
+#remotes:
+#  github:
+#    endpoint:
+#      auth:
+#         token: ref+cmd://$(pass internet/github.com/master_api_token)
+#    connector: github
+#  gitlab:
+#    endpoint:
+#      auth:
+#         token: ref+cmd://$(pass internet/gitlab.com/tokens/management)
+#    connector: gitlab
+directories:
+- contents:
+  - ref: 
+      remote: "github"
+      ids: 
+        - "nolte"
+      kind: user
+      filter:
+        includes:
+        - "gh-plumbing"
+    checkout:
+      path: github

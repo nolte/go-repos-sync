@@ -1,0 +1,21 @@
+apiVersion: reposcrtl.nolte.github.com/v1alpha1
+kind: SyncManagerConfig
+remotes:
+  github:
+    endpoint:
+      auth:
+         token: ref+cmd://$(pass internet/github.com/master_api_token)
+    connector: github
+  gitlab:
+    endpoint:
+      auth:
+         token: ref+cmd://$(pass internet/gitlab.com/tokens/management)
+    connector: gitlab
+settings:
+  basedir: /tmp/repos
+  protocol: ssh
+  bulkElements: 
+    - "https://gist.githubusercontent.com/nolte/9dd8df3e904ad9d3b5c974a132d29130/raw/9ef3967d08aa5c58e3393a4372ffb1d5772f43ff/public-repos.yaml"
+  store:
+    syncDBPath: ~/.repos-sync/sync.db
+    logLevel: warn

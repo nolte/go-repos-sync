@@ -1,0 +1,82 @@
+# all available settings of specific linters
+
+linters-settings:
+  lll:
+    line-length: 160
+  funlen:
+    lines: 80
+    statements: 60
+  prealloc:
+    range-loops: false
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - deadcode
+    - depguard
+    - dogsled
+    - errcheck
+    - funlen
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - gofmt
+    - goimports
+    - golint
+    - gomnd
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - interfacer
+    - lll
+    - misspell
+    - nakedret
+    - nolintlint
+    - rowserrcheck
+    - scopelint
+    - staticcheck
+    - structcheck
+    - stylecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - varcheck
+    - whitespace
+    - asciicheck
+    - gochecknoglobals
+    - gocognit
+    - godot
+    - godox
+    - maligned
+    - prealloc
+    - testpackage
+    - wsl
+    # don't enable:
+    #- nestif
+    #- dupl
+    #- goerr113
+issues:
+  exclude:
+    - G107
+  # Excluding configuration per-path, per-linter, per-text and per-source
+  exclude-rules:   
+    # Exclude some linters from running on tests files.
+    - path: pkg/reposcrtl/utils/lookupValueHelper.go
+      #text: "weak cryptographic primitive"
+      linters:
+        - gosec
+    - path: cmd/
+      linters:
+        - gochecknoglobals
+        - gochecknoinits
+    - path: _test\.go
+      linters:
+        - gochecknoglobals
+        - gochecknoinits
+        - scopelint
+        - gosec
+        - dogsled
