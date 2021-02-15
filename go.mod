@@ -37,7 +37,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/stretchr/testify v1.6.1
 	github.com/vito/go-interact v1.0.0 // indirect
-	github.com/xanzy/go-gitlab v0.41.0
+	github.com/xanzy/go-gitlab v0.44.0
 	github.com/xanzy/ssh-agent v0.3.0 // indirect
 	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad // indirect
 	golang.org/x/net v0.0.0-20201224014010-6772e930b67b // indirect
