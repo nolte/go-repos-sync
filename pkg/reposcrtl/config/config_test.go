@@ -12,7 +12,7 @@ import (
 func TestLoadConfig(t *testing.T) {
 	_, filename, _, _ := runtime.Caller(0)
 	t.Logf("Current test filename: %s", filename)
-	path := filepath.Join(filename, "./../../../../examples/reposcrtl.yaml")
+	path := filepath.Join(filename, "./../../../../examples/complex-projects.yaml")
 
 	testConfigPath := []string{path}
 	cfg, err := config.NewConfigFromFiles(testConfigPath)
