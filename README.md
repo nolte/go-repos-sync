@@ -1,5 +1,9 @@
 # Go Repos Sync
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nolte_go-repos-sync&metric=alert_status)](https://sonarcloud.io/dashboard?id=nolte_go-repos-sync)
+
+---
+
 Tool for keep Local Repository in Sync with public/private Remote Hosts like Github/Gitlab.
 
 ## Usage
