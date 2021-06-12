@@ -35,7 +35,7 @@ require (
 	github.com/spf13/cobra v1.1.1
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/viper v1.7.1
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.7.0
 	github.com/vito/go-interact v1.0.0 // indirect
 	github.com/xanzy/go-gitlab v0.41.0
 	github.com/xanzy/ssh-agent v0.3.0 // indirect
