@@ -1,5 +1,9 @@
 # Go Repos Sync
 
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=nolte_go-repos-sync&metric=bugs)](https://sonarcloud.io/dashboard?id=nolte_go-repos-sync) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=nolte_go-repos-sync&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=nolte_go-repos-sync) [![CI Application Tests](https://github.com/nolte/go-repos-sync/actions/workflows/build-application.yaml/badge.svg)](https://github.com/nolte/go-repos-sync/actions/workflows/build-application.yaml)
+
+---
+
 Tool for keep Local Repository in Sync with public/private Remote Hosts like Github/Gitlab.
 
 ## Usage
