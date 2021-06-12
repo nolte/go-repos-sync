@@ -1,4 +1,6 @@
 # Go Repos Sync
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync?ref=badge_shield)
+
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=nolte_go-repos-sync&metric=bugs)](https://sonarcloud.io/dashboard?id=nolte_go-repos-sync) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=nolte_go-repos-sync&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=nolte_go-repos-sync) [![CI Application Tests](https://github.com/nolte/go-repos-sync/actions/workflows/build-application.yaml/badge.svg)](https://github.com/nolte/go-repos-sync/actions/workflows/build-application.yaml)
 
@@ -50,3 +52,7 @@ goreleaser --snapshot --skip-publish --rm-dist --skip-sign
 
 
 * https://www.source-fellows.de/go-datenbank-orm-association/
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnolte%2Fgo-repos-sync?ref=badge_large)
