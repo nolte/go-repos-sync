@@ -12,7 +12,6 @@ require (
 	github.com/ghodss/yaml v1.0.0
 	github.com/gliderlabs/ssh v0.3.1 // indirect
 	github.com/go-git/go-git/v5 v5.4.2
-	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
@@ -44,13 +43,11 @@ require (
 	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a // indirect
 	golang.org/x/net v0.0.0-20210610132358-84b48f89b13b // indirect
 	golang.org/x/oauth2 v0.0.0-20210514164344-f6687ab2804c
-	golang.org/x/sys v0.0.0-20210611083646-a4fc73990273 // indirect
 	golang.org/x/term v0.0.0-20210503060354-a79de5458b56 // indirect
 	golang.org/x/time v0.0.0-20210611083556-38a9dc6acbc6 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/ini.v1 v1.62.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	gorm.io/driver/sqlite v1.1.4
 	gorm.io/gorm v1.21.10
-	k8s.io/apimachinery v0.21.1
+	k8s.io/apimachinery v0.22.0
 )
